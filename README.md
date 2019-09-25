@@ -43,7 +43,7 @@ For the following five questions, include your answers between the set of backti
 ```
 
 ## Due Date
-⏰ **Wednesday, 9 September 2019, at 2:30 PM. 🚫 _No late work will be accepted._**
+⏰ **Wednesday, 9 October 2019, at 2:30 PM. 🚫 _No late work will be accepted._**
 
 ## Submission
 Issue a pull request back into the original repo, the one from which your forked was created, before the deadline. [Look at these videos](http://code-warrior.github.io/tutorials/git/github/) for help on how to do so.
