@@ -17,29 +17,34 @@ This assignment is broken down into two parts: 1) answering questions from the r
 * Create a canvas that is `1280 × 800`.
 * Add your creature from assignment 1, complete with keyboard bindings.
 * Render a background in the canvas using **only** Processing’s primitives (no images).
-* Add 5 obstacles using **only** images (no primitives) to the first background. **You must have the right to use those images.**
-* Render a second background in the canvas using **only** one or more images (no primitives). **You must have the right to use those images.**
-* Add 5 obstacles using **only** Processing’s primitives (no images) to the second background.
-* Assign the keyboard’s letter ”F” to enable the first background.
-* Assign the keyboard’s letter ”S” to enable the second background.
+* Design 5 obstacles to the background discussed in the previous step using **only** images (no primitives). **You must have the right to use those images,** and they must have a `.png` or a `.jpg` extension. Place them in the included  `img` folder.
+* Render a second background in the canvas using one or more images (no primitives). **You must have the right to use those images,** and they too must have a `.png` or a `.jpg` extension. Place them in the included `img` folder.
+* Using **only** Processing’s primitives (no images), design 5 obstacles to be included in the background from the previous step.
+* Pressing the letter ”F” on the keyboard enables the first background and disables the second.
+* Pressing the letter ”S” on the keyboard enables the second background and disables the first.
 
 ## Questions from Readings
 For the following five questions, include your answers between the set of backticks under each question.
 
 1. What is a game?
 ```
+
 ```
 2. Should game objectives be simple or elaborate?
 ```
+
 ```
 3. In the early 1980s, how many machine type dominated the gaming market? Describe them.
 ```
+
 ```
 4. In the development of a major video game, the roles include programmer, artist, designer, producer, tester, composer, sound designer, and writer. Define the roles of the designer and the programmer.
 ```
+
 ```
 5. Which role is a great gateway job into the gaming industry?
 ```
+
 ```
 
 ## Due Date
