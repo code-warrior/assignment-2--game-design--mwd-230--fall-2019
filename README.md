@@ -17,9 +17,10 @@ This assignment is broken down into two parts: 1) answering questions from the r
 * Create a canvas that is `1280 × 800`.
 * Add your creature from assignment 1, complete with keyboard bindings.
 * Render a background in the canvas using **only** Processing’s primitives (no images).
-* Design 5 obstacles to the background discussed in the previous step using **only** images (no primitives). **You must have the right to use those images,** and they must have a `.png` or a `.jpg` extension. Place them in the included  `img` folder.
+* Design 5 different obstacles to the background discussed in the previous step using **only** images (no primitives). **You must have the right to use those images,** and they must have a `.png` or a `.jpg` extension. Place them in the included `img` folder.
 * Render a second background in the canvas using one or more images (no primitives). **You must have the right to use those images,** and they too must have a `.png` or a `.jpg` extension. Place them in the included `img` folder.
-* Using **only** Processing’s primitives (no images), design 5 obstacles to be included in the background from the previous step.
+* Using **only** Processing’s primitives (no images), design 5 different obstacles to be included in the background from the previous step.
+* Creatures and obstacles must employ collision detection.
 * Pressing the letter ”F” on the keyboard enables the first background and disables the second.
 * Pressing the letter ”S” on the keyboard enables the second background and disables the first.
 
