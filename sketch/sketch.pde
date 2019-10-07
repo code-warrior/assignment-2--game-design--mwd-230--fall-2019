@@ -82,16 +82,16 @@ void draw() {
   drawCat();
 
   if (S_KEY == keyCode) {
-    mouse1.resize(200,200);
-    image(mouse1, 230, 500);
-    mouse2.resize(100,100);
-    image(mouse2, 445, 57);
-    mouse3.resize(90, 90);
-    image(mouse3, 50, 355);
-    mouse4.resize(130,130);
+    
+    image(mouse1, 240, 550);
+    
+    image(mouse2, 445, 30);
+    
+    image(mouse3, 50, 360);
+    
     image(mouse4, 630, 450);
-    mouse5.resize(100,100);
-    image(mouse5, 845, 50);
+    
+    image(mouse5, 845, 37);
   }
 
   if (F_KEY == keyCode) {
