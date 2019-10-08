@@ -1,5 +1,5 @@
 int cat_x = 900;
-int cat_y = 400;
+int cat_y = 500;
 int yellowmouse_x = 160;
 int yellowmouse_y = 400;
 int purplemouse_x = 520;
@@ -24,6 +24,7 @@ PImage mouse4;
 PImage mouse5;
 
 void setup(){
+  
   size (1280, 800);
   draw();
   backgroundImage = loadImage(imagePath);
@@ -48,24 +49,33 @@ void drawBack1(){
 }
 
 void keyPressed() {
-//draw second background
+    //draw second background
   if (S_KEY == keyCode) {
     drawBack1();
-  }
+    image(mouse1, 240, 550);
+    image(mouse2, 445, 30);
+    image(mouse3, 50, 360);
+    image(mouse4, 630, 450);
+    image(mouse5, 845, 37);
+  } // end if S_KEY
 
   //draw first background
   if (F_KEY == keyCode) {
     if (backgroundImageIsShowing) {
       imagePath = "img/forest.jpg";
       backgroundImageIsShowing = false;
-    }
-
+    } 
     backgroundImage.resize(1280, 800);
     image(backgroundImage, 0, 0);
-  } // end if f_key
+    drawYellowMouse();
+    drawPurpleMouse();
+    drawGreenMouse();
+    drawPinkMouse();
+    drawOrangeMouse();
+  } // end if F_KEY
 
-  //move cat
-  if (key == CODED) {
+// start if move cat
+if (key == CODED) {
     if (keyCode == UP) {
       cat_y -= 3;
     } else if (keyCode == DOWN) {
@@ -75,32 +85,12 @@ void keyPressed() {
     } else if (keyCode == RIGHT) {
       cat_x += 3;
     }
-  }
+  }//end if move cat
+  
 }
+
 
 void draw() {
   drawCat();
 
-  if (S_KEY == keyCode) {
-    
-    image(mouse1, 240, 550);
-    
-    image(mouse2, 445, 30);
-    
-    image(mouse3, 50, 360);
-    
-    image(mouse4, 630, 450);
-    
-    image(mouse5, 845, 37);
-  }
-
-  if (F_KEY == keyCode) {
-    imagePath = "img/forest.jpg";
-
-    drawYellowMouse();
-    drawPurpleMouse();
-    drawGreenMouse();
-    drawPinkMouse();
-    drawOrangeMouse();
-  }
 }
