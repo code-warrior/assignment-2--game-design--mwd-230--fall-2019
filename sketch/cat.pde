@@ -30,6 +30,7 @@ void drawCatLegs() {
   line(cat_x+120, cat_y+100, cat_x+120, cat_y+130); // leg 3
   line(cat_x+150, cat_y+95, cat_x+150, cat_y+130); // leg 4
   line(cat_x+190, cat_y+50, cat_x+210, cat_y+10); // tail
+  strokeWeight(2);
 }
 
 void drawCat() {

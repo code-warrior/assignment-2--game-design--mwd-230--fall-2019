@@ -49,6 +49,7 @@ void drawBack1(){
 
 void keyPressed() {
   switch(keyCode) {
+    //draw first background
     case F_KEY: {
       if (S_KEY == previousState) {
         currentState = "F State";
@@ -63,8 +64,9 @@ void keyPressed() {
         drawOrangeMouse();
 
       break;
-    }
+    } // end first background
 
+    //draw second background
     case S_KEY: {
       if (F_KEY == previousState) {
         currentState = "S State";
@@ -79,27 +81,28 @@ void keyPressed() {
       image(mouse5, 845, 37);
 
       break;
-    }
-  }
-  
+    } // end second background
 
-// start if move cat
-if (key == CODED) {
-    if (keyCode == UP) {
-      cat_y -= 1;
-    } else if (keyCode == DOWN) {
+    // cat movement
+    case UP:
+     cat_y -= 1;
+      break;
+
+    case DOWN:
       cat_y += 1;
-    } else if (keyCode == LEFT) {
+      break;
+
+    case LEFT:
       cat_x -= 1;
-    } else if (keyCode == RIGHT) {
+      break;
+
+    case RIGHT:
       cat_x += 1;
-    }
-  }//end if move cat
-  
+      break;
+  } // end cat movement
 }
 
 
 void draw() {
   drawCat();
-  
 }
