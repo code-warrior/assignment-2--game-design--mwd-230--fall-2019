@@ -1,16 +1,3 @@
-PImage backgroundImage;
-String imagePath = "img/forest.jpg";
-public boolean drawnBackgroundIsShowing = true;
-public final int F_KEY = 70;
-public final int S_KEY = 83;
-final int SPACING = 100;
-final int BLOCK_SIZE = 100;
-PImage mouse1;
-PImage mouse2;
-PImage mouse3;
-PImage mouse4;
-PImage mouse5;
-
 void setup(){
   size (1280, 800);
   backgroundImage = loadImage(imagePath);
