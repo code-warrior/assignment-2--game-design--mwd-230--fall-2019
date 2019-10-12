@@ -1,15 +1,3 @@
-int cat_x = 900;
-int cat_y = 500;
-int yellowmouse_x = 160;
-int yellowmouse_y = 400;
-int purplemouse_x = 520;
-int purplemouse_y = 360;
-int greenmouse_x = 960;
-int greenmouse_y = 320;
-int pinkmouse_x = 360;
-int pinkmouse_y = 610;
-int orangemouse_x = 700;
-int orangemouse_y = 580;
 PImage backgroundImage;
 String imagePath = "img/forest.jpg";
 public final int F_KEY = 70;
@@ -82,24 +70,22 @@ void keyPressed() {
 
       break;
     } // end second background
-
-    // cat movement
-    case UP:
-     cat_y -= 1;
-      break;
-
-    case DOWN:
-      cat_y += 1;
-      break;
-
-    case LEFT:
-      cat_x -= 1;
-      break;
-
-    case RIGHT:
-      cat_x += 1;
-      break;
-  } // end cat movement
+    
+  }
+  //cat movement 
+  if(keyCode == UP) {
+     cat_y -= 15;
+   }
+   else if(keyCode == DOWN) {
+     cat_y += 15;
+   }
+   else if(keyCode == LEFT) {
+     cat_x -= 15;
+   }
+   else if(keyCode == RIGHT) {
+     cat_x += 15;
+   }
+  
 }
 
 
