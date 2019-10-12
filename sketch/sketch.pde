@@ -1,5 +1,6 @@
 PImage backgroundImage;
 String imagePath = "img/forest.jpg";
+public boolean drawnBackgroundIsShowing = true;
 public final int F_KEY = 70;
 public final int S_KEY = 83;
 int previousState = F_KEY;
@@ -24,6 +25,17 @@ void setup(){
   mouse5 = loadImage("img/mouse5.png");
 }
 
+ void backgroundSwitch() {
+   if(drawnBackgroundIsShowing) {
+     drawBack1();
+   }
+   else {
+     backgroundImage.resize(1280, 800);
+     background(backgroundImage);
+     
+     
+   }
+ }
 // draw circle background
 void drawBack1(){
   background(100);
