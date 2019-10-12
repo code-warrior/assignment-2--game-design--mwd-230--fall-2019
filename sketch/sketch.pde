@@ -1,3 +1,4 @@
+import java.util.Arrays;
 /*
   Create a canvas that is 1280 × 800.
 
@@ -27,31 +28,51 @@ public int starting_x = 50;
 public int starting_y = 50;
 public boolean firstBackground = true;
 PImage bg;
+PImage obs;
 public final static int HEAD_WIDTH_HEIGHT = 75;
 public final static int BODY_WIDTH = 250;
 public final static int BODY_HEIGHT = 150;
 public final static int MOVEMENT_SPEED = 10;
 public final static int TRUE_GRAY = (255/2);
 public final static int WHITE = 255;
+public int[][] obsPoints = new int[2][5];
 
 void setup() {
-    size(1280, 800);
-    setBackground();
-    bg = loadImage("img/Background--1.jpg");
+  size(1280, 800);
+  setBackground();
+  bg = loadImage("img/Background--1.jpg");
+  obs = loadImage("img/Obstacle--1.png");
+  //for loop with 5 random obstacles
+  //Generate random numbers for x/y
+  //max x is width
+  //max y is height
+  for(int i = 0; i < 5; i++) {
+    int x = floor(random(128))*10;
+    int y = floor(random(80))*10;
+    obsPoints[0][i] = x;
+    obsPoints[1][i] = y;
+    System.out.println(x + "   " + y);
+  }
+    
 }
 
 void drawObstacles(int point_x, int point_y) {
   if(firstBackground) {
-
+    image(obs, point_x, point_y);
   }
   else {
-    
+    stroke(0);
+    ellipse(point_x, point_y, 50, 50);
+    ellipse(point_x+5, point_y+5, 50, 50);
+    ellipse(point_x-5, point_y+5, 50, 50);
+    ellipse(point_x+5, point_y-5, 50, 50);
+    ellipse(point_x-5, point_y-5, 50, 50);
   }
 }
 
 void setBackground() {
   if(firstBackground) {
-    background(0);
+    background(255);
   }
   else {
     background(bg); 
@@ -59,7 +80,6 @@ void setBackground() {
 }
 
 void drawCreature(int point_x, int point_y) {
-    setBackground();
     point(point_x, point_y);
 
     //Body
@@ -94,32 +114,95 @@ void drawCreature(int point_x, int point_y) {
 
 void draw() {
   setBackground();
-  //for loop with 5 random obstacles
+  for(int i = 0; i < 5; i++) {
+    drawObstacles(obsPoints[0][i],obsPoints[1][i]);
+  }
   drawCreature(starting_x, starting_y);
 
 }
 
 //Check against the bounds of our canvas
-void keyReleased() {
-  if(keyCode == 38 && starting_y > 0) {
+void keyPressed() {
+  final int TOTAL_WIDTH = (50 + BODY_WIDTH + HEAD_WIDTH_HEIGHT);
+  final int TOTAL_HEIGHT = (50 + BODY_HEIGHT);
+  int[] currentPoints = {starting_x, starting_y};
+  if(keyCode == 38 && starting_y > 0 && !(hasCollided(currentPoints, TOTAL_WIDTH, TOTAL_HEIGHT))) {
     starting_y -= MOVEMENT_SPEED;
   }
-  else if(keyCode == 40 && starting_y < height - (50 + BODY_HEIGHT)) {
+  else if(keyCode == 40 && starting_y < height - TOTAL_HEIGHT && !(hasCollided(currentPoints, TOTAL_WIDTH, TOTAL_HEIGHT))) {
     starting_y += MOVEMENT_SPEED;
   }
-  else if(keyCode == 37 && starting_x > 0) {
+  else if(keyCode == 37 && starting_x > 0 && !(hasCollided(currentPoints, TOTAL_WIDTH, TOTAL_HEIGHT))) {
     starting_x -= MOVEMENT_SPEED;
   }
-  else if(keyCode == 39 && starting_x < width - (50 + BODY_WIDTH + HEAD_WIDTH_HEIGHT)) {
+  else if(keyCode == 39 && starting_x < width - TOTAL_WIDTH && !(hasCollided(currentPoints, TOTAL_WIDTH, TOTAL_HEIGHT))) {
     starting_x += MOVEMENT_SPEED;
   }
-  else if(keyCode == 70 || keyCode == 83){
+  else if((keyCode == 70 && !firstBackground) || (keyCode == 83 && firstBackground)){
     firstBackground = !firstBackground;
   }
   //Debugging
   else {
-    //System.out.println("No way jose " + key + " " + keyCode + " " + starting_x + " " + starting_y);
+    
     //left up right down
     // 37  38 39    40
+  }
+  //System.out.println("No way jose " + key + " " + keyCode + " " + starting_x + " " + starting_y + " Has collided: " + hasCollided(currentPoints, TOTAL_WIDTH, TOTAL_HEIGHT));
+}
+
+boolean hasCollided(int[] creaturePos, int creatureWidth, int creatureHeight) {
+  int low_x = creaturePos[0];
+  int high_x = low_x + creatureWidth;
+  int low_y = creaturePos[1];
+  int high_y = low_y + creatureHeight;
+  //System.out.println(low_x + "  " + high_x);
+  //System.out.println(low_y + "  " + high_y);
+  if(obsPoints[0][0] < high_x &&
+     obsPoints[0][0] + 100 > low_x &&
+     obsPoints[1][0] < high_y &&
+     obsPoints[1][0] + 100 > low_y)
+  {
+    starting_x = 50;
+    starting_y = 50;
+    return true;
+  }
+  else if(obsPoints[0][1] < high_x &&
+     obsPoints[0][1] + 100 > low_x &&
+     obsPoints[1][1] < high_y &&
+     obsPoints[1][1] + 100 > low_y)
+  {
+    starting_x = 50;
+    starting_y = 50;
+    return true;
+  }
+  else if(obsPoints[0][2] < high_x &&
+     obsPoints[0][2] + 100 > low_x &&
+     obsPoints[1][2] < high_y &&
+     obsPoints[1][2] + 100 > low_y)
+  {
+    starting_x = 50;
+    starting_y = 50;
+    return true;
+  }
+  else if(obsPoints[0][3] < high_x &&
+     obsPoints[0][3] + 100 > low_x &&
+     obsPoints[1][3] < high_y &&
+     obsPoints[1][3] + 100 > low_y)
+  {
+    starting_x = 50;
+    starting_y = 50;
+    return true;
+  }
+  else if(obsPoints[0][4] < high_x &&
+     obsPoints[0][4] + 100 > low_x &&
+     obsPoints[1][4] < high_y &&
+     obsPoints[1][4] + 100 > low_y)
+  {
+    starting_x = 50;
+    starting_y = 50;
+    return true;
+  }
+  else {
+    return false;
   }
 }
