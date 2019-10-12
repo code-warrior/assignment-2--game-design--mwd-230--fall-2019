@@ -3,8 +3,6 @@ String imagePath = "img/forest.jpg";
 public boolean drawnBackgroundIsShowing = true;
 public final int F_KEY = 70;
 public final int S_KEY = 83;
-int previousState = F_KEY;
-String currentState = "F State";
 final int SPACING = 100;
 final int BLOCK_SIZE = 100;
 PImage mouse1;
@@ -29,10 +27,10 @@ void setup(){
    if(drawnBackgroundIsShowing) {
      drawBack1();
      image(mouse1, 240, 550);
-      image(mouse2, 445, 30);
-      image(mouse3, 50, 360);
-      image(mouse4, 630, 450);
-      image(mouse5, 845, 37);
+     image(mouse2, 445, 30);
+     image(mouse3, 50, 360);
+     image(mouse4, 630, 450);
+     image(mouse5, 845, 37);
    }
    else {
      backgroundImage.resize(1280, 800);
@@ -42,8 +40,6 @@ void setup(){
         drawGreenMouse();
         drawPinkMouse();
         drawOrangeMouse();
-     
-     
    }
  }
 // draw circle background
@@ -58,44 +54,33 @@ void drawBack1(){
 }
 
 void keyPressed() {
-  switch(keyCode) {
-    //draw first background
-    case F_KEY: {
-      if (S_KEY == previousState) {
-        currentState = "F State";
-        previousState = F_KEY;
-      }
-
-      break;
-    } // end first background
-
-    //draw second background
-    case S_KEY: {
-      if (F_KEY == previousState) {
-        currentState = "S State";
-        previousState = S_KEY;
-      }
-      break;
-    } // end second background
-    
-  }
-  //cat movement 
-  if(keyCode == UP) {
-     cat_y -= 15;
+  //background switch keys
+  if(keyCode == F_KEY){
+    drawnBackgroundIsShowing = true;
+   }
+   else if(keyCode == S_KEY){
+    drawnBackgroundIsShowing = false;
+   }
+  // end background switch keys
+  
+  //cat movement keys
+  else if(keyCode == UP) {
+     cat_y -= 6;
    }
    else if(keyCode == DOWN) {
-     cat_y += 15;
+     cat_y += 6;
    }
    else if(keyCode == LEFT) {
-     cat_x -= 15;
+     cat_x -= 6;
    }
    else if(keyCode == RIGHT) {
-     cat_x += 15;
+     cat_x += 6;
    }
-  
+   //end cat movement keys
 }
 
 
 void draw() {
+  backgroundSwitch(); // drawing f and s backgrounds
   drawCat();
 }
