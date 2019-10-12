@@ -28,10 +28,20 @@ void setup(){
  void backgroundSwitch() {
    if(drawnBackgroundIsShowing) {
      drawBack1();
+     image(mouse1, 240, 550);
+      image(mouse2, 445, 30);
+      image(mouse3, 50, 360);
+      image(mouse4, 630, 450);
+      image(mouse5, 845, 37);
    }
    else {
      backgroundImage.resize(1280, 800);
      background(backgroundImage);
+        drawYellowMouse();
+        drawPurpleMouse();
+        drawGreenMouse();
+        drawPinkMouse();
+        drawOrangeMouse();
      
      
    }
@@ -56,13 +66,6 @@ void keyPressed() {
         previousState = F_KEY;
       }
 
-        background(backgroundImage);
-        drawYellowMouse();
-        drawPurpleMouse();
-        drawGreenMouse();
-        drawPinkMouse();
-        drawOrangeMouse();
-
       break;
     } // end first background
 
@@ -72,14 +75,6 @@ void keyPressed() {
         currentState = "S State";
         previousState = S_KEY;
       }
-
-       drawBack1();
-      image(mouse1, 240, 550);
-      image(mouse2, 445, 30);
-      image(mouse3, 50, 360);
-      image(mouse4, 630, 450);
-      image(mouse5, 845, 37);
-
       break;
     } // end second background
     
