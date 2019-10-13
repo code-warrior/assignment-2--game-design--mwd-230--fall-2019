@@ -122,7 +122,7 @@ void draw() {
 }
 
 //Check against the bounds of our canvas
-void keyPressed() {
+void keyReleased() {
   final int TOTAL_WIDTH = (50 + BODY_WIDTH + HEAD_WIDTH_HEIGHT);
   final int TOTAL_HEIGHT = (50 + BODY_HEIGHT);
   int[] currentPoints = {starting_x, starting_y};
