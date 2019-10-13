@@ -28,23 +28,26 @@ For the following five questions, include your answers between the set of backti
 
 1. What is a game?
 ```
-
+A game is an activity that requires at least one player, has rules, and has a win and/or lose condition.
 ```
 2. Should game objectives be simple or elaborate?
 ```
-
+A games objective should be simple so that the players know the goal. The objective should be clear and can be summarized quickly.
 ```
 3. In the early 1980s, how many machine type dominated the gaming market? Describe them.
 ```
-
+In the 1980s, three machine types dominated the gaming market. The first one was Uprights. A player would stand upright in front of this cabinet while playing. The second one was Cocktail Tables. This is an arcade game that was set up on top of a table so the player can sit down while using it. The third machine was Cockpits. This was a game cabinet where players could lean or sit down to help enhance the gaming experience as if you’re actually inside the video game.
 ```
 4. In the development of a major video game, the roles include programmer, artist, designer, producer, tester, composer, sound designer, and writer. Define the roles of the designer and the programmer.
 ```
+The programmer uses different programming languages to write code that helps the games functions in multiple ways. They code to draw graphics, the control systems for users, camera functions that give players visuals, writes the AI system and so much more. Every programmer usually completes different tasks and roles depending on the objective.
+
+ A designer, specifically a game designer, should have great communication skills as well as being well rounded in plenty of other skills. Designers tend to have specific specializations such as being a level designer, combat designer, system designer, or creative director. Designers main objective is to tell the difference between a good or bad game and to make sure that the game is fun for its intended audience.
 
 ```
 5. Which role is a great gateway job into the gaming industry?
 ```
-
+Being a tester is a great gateway job to get into the gaming industry. Although this is a tedious and boring job, testers are essential to the game running smoothly and it’s a great way to work your way up in the industry. 
 ```
 
 ## Due Date
