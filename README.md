@@ -28,23 +28,24 @@ For the following five questions, include your answers between the set of backti
 
 1. What is a game?
 ```
-
+A game is a form of entertainment where you are presented with a way to “win” and “lose.” Some games abstract winning and losing to be objectives. Ghis is what the book defines as a game is that it is a set of rules and objectives.
 ```
 2. Should game objectives be simple or elaborate?
 ```
-
+Game objectives should be simple and easy to understand. this goves the player a sense of objectivity and way to move forward. 
 ```
 3. In the early 1980s, how many machine type dominated the gaming market? Describe them.
 ```
-
+There were 3 kinds of gaming machines. There were uprights, cocktails and cockpits. Uprights were arcade machines you stood at, cocktails were arcade machines you sat at and cockpits were the ones you “rode” in. You sat in a seat and looked up at a screen. 
 ```
 4. In the development of a major video game, the roles include programmer, artist, designer, producer, tester, composer, sound designer, and writer. Define the roles of the designer and the programmer.
 ```
-
+The programmer is the person that renders the graphics and the text onto the screen or visual medium that is presented. It is their job to make sure things are put together correctly. 
+The designer is the person who “thinks” about what the game will look like. They do things like design the levels and the environments that the player is put in.
 ```
 5. Which role is a great gateway job into the gaming industry?
 ```
-
+Tester and QA are both a great way to get into the industry. 
 ```
 
 ## Due Date
