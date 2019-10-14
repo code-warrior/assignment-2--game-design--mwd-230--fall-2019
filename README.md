@@ -62,8 +62,8 @@ Issue a pull request back into the original repo, the one from which your forked
 | **Questions**                        | `25`   |
 | **First background rendering**       | `10`   |
 | **Obstacles for first background**   | `20`   |
-| **First background rendering**       | `10`   |
-| **Obstacles for first background**   | `20`   |
+| **Second background rendering**      | `10`   |
+| **Obstacles for second background**  | `20`   |
 | **“F” key is assigned**              | `5`    |
 | **“S” key is assigned**              | `5`    |
 | **Arrow keys work to move creature** | `5`    |
