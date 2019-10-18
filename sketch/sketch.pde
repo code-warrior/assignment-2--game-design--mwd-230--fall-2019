@@ -5,12 +5,12 @@ PImage img, img2, img3, img4, img5, img6;
 void setup() {
  size(1280, 800); 
  
-img = loadImage("patternbackground.png");
-img2 = loadImage("starplate.png");
-img3 = loadImage("starshieldplate.png");
-img4 = loadImage("starspikeplate.png");
-img5 = loadImage("starsponge.png");
-img6 = loadImage("starsteelwool.png");
+img = loadImage("img/patternbackground.png");
+img2 = loadImage("img/starplate.png");
+img3 = loadImage("img/starshieldplate.png");
+img4 = loadImage("img/starspikeplate.png");
+img5 = loadImage("img/starsponge.png");
+img6 = loadImage("img/starsteelwool.png");
 }
 
 int x = 200; //X axis movement
